@@ -1,0 +1,58 @@
+version: api.keploy.io/v1beta2
+kind: Http
+name: test-15
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "115"
+            Content-Type: application/json
+            Host: 127.0.0.1:8000
+            Postman-Token: 4e014bcf-4ab6-4aa2-a44d-97076d6e9266
+            User-Agent: PostmanRuntime/7.33.0
+        body: |4-
+                {
+                  "name": "Bob Johnson",
+                  "email": "bobjohnson@example.com",
+                  "password": "bobjohnson456"
+                }
+        body_type: ""
+    resp:
+        status_code: 200
+        header:
+            Content-Length: "113"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:17:41 GMT
+            Server: uvicorn
+        body: '{"name":"Bob Johnson","email":"bobjohnson@example.com","password":"scpckpiotpo567","stream":"Mathematics","id":4}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+    objects: []
+    assertions:
+        noise:
+            - header.Date
+    created: 1697282263
+curl: |-
+    curl --request POST \
+      --url http://127.0.0.1:8000/students/ \
+      --header 'Accept: */*' \
+      --header 'Postman-Token: 4e014bcf-4ab6-4aa2-a44d-97076d6e9266' \
+      --header 'Host: 127.0.0.1:8000' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Connection: keep-alive' \
+      --header 'Content-Type: application/json' \
+      --header 'User-Agent: PostmanRuntime/7.33.0' \
+      --data '    {
+          "name": "Bob Johnson",
+          "email": "bobjohnson@example.com",
+          "password": "bobjohnson456"
+        }'

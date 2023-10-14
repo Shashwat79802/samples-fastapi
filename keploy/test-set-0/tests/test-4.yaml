@@ -1,0 +1,59 @@
+version: api.keploy.io/v1beta2
+kind: Http
+name: test-4
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "116"
+            Content-Type: application/json
+            Host: 127.0.0.1:8000
+            Postman-Token: 8eabc9d2-f8f5-46af-85fb-fb8b353b2b98
+            User-Agent: PostmanRuntime/7.33.0
+        body: |4-
+                {
+                  "name": "Bob Johnson",
+                  "email": "bobjohnson@example.com",
+                  "password": "bobjohnson456"
+                },
+        body_type: ""
+    resp:
+        status_code: 422
+        header:
+            Content-Length: "121"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:14:27 GMT
+            Server: uvicorn
+        body: '{"detail":[{"type":"json_invalid","loc":["body",115],"msg":"JSON decode error","input":{},"ctx":{"error":"Extra data"}}]}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+    objects: []
+    assertions:
+        noise:
+            - body.detail.loc
+            - header.Date
+    created: 1697282070
+curl: |-
+    curl --request POST \
+      --url http://127.0.0.1:8000/students/ \
+      --header 'Host: 127.0.0.1:8000' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Connection: keep-alive' \
+      --header 'Content-Type: application/json' \
+      --header 'User-Agent: PostmanRuntime/7.33.0' \
+      --header 'Accept: */*' \
+      --header 'Postman-Token: 8eabc9d2-f8f5-46af-85fb-fb8b353b2b98' \
+      --data '    {
+          "name": "Bob Johnson",
+          "email": "bobjohnson@example.com",
+          "password": "bobjohnson456"
+        },'

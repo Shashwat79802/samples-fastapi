@@ -1,0 +1,45 @@
+version: api.keploy.io/v1beta2
+kind: Http
+name: test-8
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/5
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: 127.0.0.1:8000
+            Postman-Token: a4fcb120-1cea-487c-9d1c-174fe0fb1a83
+            User-Agent: PostmanRuntime/7.33.0
+        body: ""
+        body_type: ""
+    resp:
+        status_code: 404
+        header:
+            Content-Length: "42"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 17:12:41 GMT
+            Server: uvicorn
+        body: '{"detail":"Student with ID=5 not found!!"}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+    objects: []
+    assertions:
+        noise:
+            - header.Date
+    created: 1697303565
+curl: |
+    curl --request GET \
+      --url http://127.0.0.1:8000/students/5 \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Connection: keep-alive' \
+      --header 'User-Agent: PostmanRuntime/7.33.0' \
+      --header 'Accept: */*' \
+      --header 'Postman-Token: a4fcb120-1cea-487c-9d1c-174fe0fb1a83' \
+      --header 'Host: 127.0.0.1:8000' \

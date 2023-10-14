@@ -1,0 +1,1498 @@
+version: api.keploy.io/v1beta1
+name: report-1
+status: FAILED
+success: 9
+failure: 8
+total: 17
+tests:
+    - kind: Http
+      name: report-1
+      status: PASSED
+      started: 1697282639
+      completed: 1697282639
+      test_case_path: /home/shashwat/Projects/fastapi-postgres/keploy/test-set-0
+      mock_path: ""
+      test_case_id: test-1
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: 127.0.0.1:8000
+            Postman-Token: e4dc3786-f91d-48d2-9c32-700e917ba6ac
+            User-Agent: PostmanRuntime/7.33.0
+        body: ""
+        body_type: ""
+      resp:
+        status_code: 404
+        header:
+            Content-Length: "29"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:13:49 GMT
+            Server: uvicorn
+        body: '{"detail":"Data not found!!"}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+      noise:
+        - header.Date
+      result:
+        status_code:
+            normal: true
+            expected: 404
+            actual: 404
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:13:49 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:23:59 GMT
+            - normal: true
+              expected:
+                key: Server
+                value:
+                    - uvicorn
+              actual:
+                key: Server
+                value:
+                    - uvicorn
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "29"
+              actual:
+                key: Content-Length
+                value:
+                    - "29"
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '{"detail":"Data not found!!"}'
+              actual: '{"detail":"Data not found!!"}'
+        dep_result: []
+    - kind: Http
+      name: report-1
+      status: PASSED
+      started: 1697282639
+      completed: 1697282639
+      test_case_path: /home/shashwat/Projects/fastapi-postgres/keploy/test-set-0
+      mock_path: ""
+      test_case_id: test-2
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "106"
+            Content-Type: application/json
+            Host: 127.0.0.1:8000
+            Postman-Token: 3e2b0cc8-e4ab-4904-bd40-500ec7be0d96
+            User-Agent: PostmanRuntime/7.33.0
+        body: |4-
+                {
+                  "name": "John Doe",
+                  "email": "johndoe@example.com",
+                  "password": "johndoe123"
+                }
+        body_type: ""
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "104"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:14:05 GMT
+            Server: uvicorn
+        body: '{"name":"John Doe","email":"johndoe@example.com","password":"skpioepf234","stream":"Mathematics","id":1}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+      noise:
+        - header.Date
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "104"
+              actual:
+                key: Content-Length
+                value:
+                    - "104"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:14:05 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:23:59 GMT
+            - normal: true
+              expected:
+                key: Server
+                value:
+                    - uvicorn
+              actual:
+                key: Server
+                value:
+                    - uvicorn
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '{"name":"John Doe","email":"johndoe@example.com","password":"skpioepf234","stream":"Mathematics","id":1}'
+              actual: '{"name":"John Doe","email":"johndoe@example.com","password":"skpioepf234","stream":"Mathematics","id":1}'
+        dep_result: []
+    - kind: Http
+      name: report-1
+      status: FAILED
+      started: 1697282639
+      completed: 1697282640
+      test_case_path: /home/shashwat/Projects/fastapi-postgres/keploy/test-set-0
+      mock_path: ""
+      test_case_id: test-3
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "115"
+            Content-Type: application/json
+            Host: 127.0.0.1:8000
+            Postman-Token: 0d128a77-cc20-47e4-bd75-eda2558f0353
+            User-Agent: PostmanRuntime/7.33.0
+        body: |4-
+                {
+                  "name": "Alice Smith",
+                  "email": "alicesmith@example.com",
+                  "password": "alicesmith789"
+                }
+        body_type: ""
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "113"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:14:16 GMT
+            Server: uvicorn
+        body: '{"name":"Alice Smith","email":"alicesmith@example.com","password":"sbmjdftnjui89:","stream":"Mathematics","id":2}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+      noise:
+        - header.Date
+      result:
+        status_code:
+            normal: false
+            expected: 200
+            actual: 500
+        headers_result:
+            - normal: false
+              expected:
+                key: Content-Length
+                value:
+                    - "113"
+              actual:
+                key: Content-Length
+                value:
+                    - "21"
+            - normal: false
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - text/plain; charset=utf-8
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:14:16 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:23:59 GMT
+            - normal: true
+              expected:
+                key: Server
+                value:
+                    - uvicorn
+              actual:
+                key: Server
+                value:
+                    - uvicorn
+        body_result:
+            - normal: false
+              type: PLAIN
+              expected: '{"name":"Alice Smith","email":"alicesmith@example.com","password":"sbmjdftnjui89:","stream":"Mathematics","id":2}'
+              actual: Internal Server Error
+        dep_result: []
+    - kind: Http
+      name: report-1
+      status: PASSED
+      started: 1697282640
+      completed: 1697282640
+      test_case_path: /home/shashwat/Projects/fastapi-postgres/keploy/test-set-0
+      mock_path: ""
+      test_case_id: test-4
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "116"
+            Content-Type: application/json
+            Host: 127.0.0.1:8000
+            Postman-Token: 8eabc9d2-f8f5-46af-85fb-fb8b353b2b98
+            User-Agent: PostmanRuntime/7.33.0
+        body: |4-
+                {
+                  "name": "Bob Johnson",
+                  "email": "bobjohnson@example.com",
+                  "password": "bobjohnson456"
+                },
+        body_type: ""
+      resp:
+        status_code: 422
+        header:
+            Content-Length: "121"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:14:27 GMT
+            Server: uvicorn
+        body: '{"detail":[{"type":"json_invalid","loc":["body",115],"msg":"JSON decode error","input":{},"ctx":{"error":"Extra data"}}]}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+      noise:
+        - body.detail.loc
+        - header.Date
+      result:
+        status_code:
+            normal: true
+            expected: 422
+            actual: 422
+        headers_result:
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:14:27 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:23:59 GMT
+            - normal: true
+              expected:
+                key: Server
+                value:
+                    - uvicorn
+              actual:
+                key: Server
+                value:
+                    - uvicorn
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "121"
+              actual:
+                key: Content-Length
+                value:
+                    - "121"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '{"detail":[{"type":"json_invalid","loc":["body",115],"msg":"JSON decode error","input":{},"ctx":{"error":"Extra data"}}]}'
+              actual: '{"detail":[{"type":"json_invalid","loc":["body",115],"msg":"JSON decode error","input":{},"ctx":{"error":"Extra data"}}]}'
+        dep_result: []
+    - kind: Http
+      name: report-1
+      status: PASSED
+      started: 1697282640
+      completed: 1697282640
+      test_case_path: /home/shashwat/Projects/fastapi-postgres/keploy/test-set-0
+      mock_path: ""
+      test_case_id: test-5
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "115"
+            Content-Type: application/json
+            Host: 127.0.0.1:8000
+            Postman-Token: 003f5a87-b538-426e-a7db-3486a4bda6df
+            User-Agent: PostmanRuntime/7.33.0
+        body: |4-
+                {
+                  "name": "Bob Johnson",
+                  "email": "bobjohnson@example.com",
+                  "password": "bobjohnson456"
+                }
+        body_type: ""
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "113"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:14:34 GMT
+            Server: uvicorn
+        body: '{"name":"Bob Johnson","email":"bobjohnson@example.com","password":"scpckpiotpo567","stream":"Mathematics","id":3}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+      noise:
+        - header.Date
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "113"
+              actual:
+                key: Content-Length
+                value:
+                    - "113"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:14:34 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:23:59 GMT
+            - normal: true
+              expected:
+                key: Server
+                value:
+                    - uvicorn
+              actual:
+                key: Server
+                value:
+                    - uvicorn
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '{"name":"Bob Johnson","email":"bobjohnson@example.com","password":"scpckpiotpo567","stream":"Mathematics","id":3}'
+              actual: '{"name":"Bob Johnson","email":"bobjohnson@example.com","password":"scpckpiotpo567","stream":"Mathematics","id":3}'
+        dep_result: []
+    - kind: Http
+      name: report-1
+      status: FAILED
+      started: 1697282640
+      completed: 1697282640
+      test_case_path: /home/shashwat/Projects/fastapi-postgres/keploy/test-set-0
+      mock_path: ""
+      test_case_id: test-6
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: 127.0.0.1:8000
+            Postman-Token: 1ec16fcf-b9eb-45fd-8ddf-6ca0e6694bec
+            User-Agent: PostmanRuntime/7.33.0
+        body: ""
+        body_type: ""
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "334"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:14:53 GMT
+            Server: uvicorn
+        body: '[{"name":"John Doe","email":"johndoe@example.com","password":"skpioepf234","stream":"Mathematics","id":1},{"name":"Alice Smith","email":"alicesmith@example.com","password":"sbmjdftnjui89:","stream":"Mathematics","id":2},{"name":"Bob Johnson","email":"bobjohnson@example.com","password":"scpckpiotpo567","stream":"Mathematics","id":3}]'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+      noise:
+        - header.Date
+        - body.stream
+      result:
+        status_code:
+            normal: false
+            expected: 200
+            actual: 500
+        headers_result:
+            - normal: true
+              expected:
+                key: Server
+                value:
+                    - uvicorn
+              actual:
+                key: Server
+                value:
+                    - uvicorn
+            - normal: false
+              expected:
+                key: Content-Length
+                value:
+                    - "334"
+              actual:
+                key: Content-Length
+                value:
+                    - "21"
+            - normal: false
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - text/plain; charset=utf-8
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:14:53 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:23:59 GMT
+        body_result:
+            - normal: false
+              type: PLAIN
+              expected: '[{"name":"John Doe","email":"johndoe@example.com","password":"skpioepf234","stream":"Mathematics","id":1},{"name":"Alice Smith","email":"alicesmith@example.com","password":"sbmjdftnjui89:","stream":"Mathematics","id":2},{"name":"Bob Johnson","email":"bobjohnson@example.com","password":"scpckpiotpo567","stream":"Mathematics","id":3}]'
+              actual: Internal Server Error
+        dep_result: []
+    - kind: Http
+      name: report-1
+      status: PASSED
+      started: 1697282640
+      completed: 1697282640
+      test_case_path: /home/shashwat/Projects/fastapi-postgres/keploy/test-set-0
+      mock_path: ""
+      test_case_id: test-7
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/2
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: 127.0.0.1:8000
+            Postman-Token: 9752c144-2fb6-46e5-b0c7-fe2ccf075400
+            User-Agent: PostmanRuntime/7.33.0
+        body: ""
+        body_type: ""
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "113"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:14:59 GMT
+            Server: uvicorn
+        body: '{"name":"Alice Smith","email":"alicesmith@example.com","password":"sbmjdftnjui89:","stream":"Mathematics","id":2}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+      noise:
+        - header.Date
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Server
+                value:
+                    - uvicorn
+              actual:
+                key: Server
+                value:
+                    - uvicorn
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "113"
+              actual:
+                key: Content-Length
+                value:
+                    - "113"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:14:59 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:23:59 GMT
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '{"name":"Alice Smith","email":"alicesmith@example.com","password":"sbmjdftnjui89:","stream":"Mathematics","id":2}'
+              actual: '{"name":"Alice Smith","email":"alicesmith@example.com","password":"sbmjdftnjui89:","stream":"Mathematics","id":2}'
+        dep_result: []
+    - kind: Http
+      name: report-1
+      status: FAILED
+      started: 1697282640
+      completed: 1697282640
+      test_case_path: /home/shashwat/Projects/fastapi-postgres/keploy/test-set-0
+      mock_path: ""
+      test_case_id: test-8
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/5
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: 127.0.0.1:8000
+            Postman-Token: c2387b0b-9610-4529-a987-65455ee9c900
+            User-Agent: PostmanRuntime/7.33.0
+        body: ""
+        body_type: ""
+      resp:
+        status_code: 404
+        header:
+            Content-Length: "42"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:15:03 GMT
+            Server: uvicorn
+        body: '{"detail":"Student with ID=5 not found!!"}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+      noise:
+        - header.Date
+      result:
+        status_code:
+            normal: false
+            expected: 404
+            actual: 500
+        headers_result:
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:15:03 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:23:59 GMT
+            - normal: true
+              expected:
+                key: Server
+                value:
+                    - uvicorn
+              actual:
+                key: Server
+                value:
+                    - uvicorn
+            - normal: false
+              expected:
+                key: Content-Length
+                value:
+                    - "42"
+              actual:
+                key: Content-Length
+                value:
+                    - "21"
+            - normal: false
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - text/plain; charset=utf-8
+        body_result:
+            - normal: false
+              type: PLAIN
+              expected: '{"detail":"Student with ID=5 not found!!"}'
+              actual: Internal Server Error
+        dep_result: []
+    - kind: Http
+      name: report-1
+      status: PASSED
+      started: 1697282640
+      completed: 1697282640
+      test_case_path: /home/shashwat/Projects/fastapi-postgres/keploy/test-set-0
+      mock_path: ""
+      test_case_id: test-9
+      req:
+        method: PUT
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/3
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "152"
+            Content-Type: application/json
+            Host: 127.0.0.1:8000
+            Postman-Token: 2f3e56c1-a4a1-482c-9537-91e70245bb05
+            User-Agent: PostmanRuntime/7.33.0
+        body: |4-
+                {
+                    "name": "Bob Johnson",
+                    "email": "bob.johnson@example.com",
+                    "password": "bobjohnson456",
+                    "stream": "Comnerce"
+                }
+        body_type: ""
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "111"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:15:58 GMT
+            Server: uvicorn
+        body: '{"name":"Bob Johnson","email":"bob.johnson@example.com","password":"scpckpiotpo567","stream":"Comnerce","id":3}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+      noise:
+        - header.Date
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Server
+                value:
+                    - uvicorn
+              actual:
+                key: Server
+                value:
+                    - uvicorn
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "111"
+              actual:
+                key: Content-Length
+                value:
+                    - "111"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:15:58 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:23:59 GMT
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '{"name":"Bob Johnson","email":"bob.johnson@example.com","password":"scpckpiotpo567","stream":"Comnerce","id":3}'
+              actual: '{"name":"Bob Johnson","email":"bob.johnson@example.com","password":"scpckpiotpo567","stream":"Comnerce","id":3}'
+        dep_result: []
+    - kind: Http
+      name: report-1
+      status: FAILED
+      started: 1697282640
+      completed: 1697282640
+      test_case_path: /home/shashwat/Projects/fastapi-postgres/keploy/test-set-0
+      mock_path: ""
+      test_case_id: test-10
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/3
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: 127.0.0.1:8000
+            Postman-Token: 36fca053-e494-4497-8113-b92670c25561
+            User-Agent: PostmanRuntime/7.33.0
+        body: ""
+        body_type: ""
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "111"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:16:05 GMT
+            Server: uvicorn
+        body: '{"name":"Bob Johnson","email":"bob.johnson@example.com","password":"scpckpiotpo567","stream":"Comnerce","id":3}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+      noise:
+        - header.Date
+      result:
+        status_code:
+            normal: false
+            expected: 200
+            actual: 500
+        headers_result:
+            - normal: false
+              expected:
+                key: Content-Length
+                value:
+                    - "111"
+              actual:
+                key: Content-Length
+                value:
+                    - "21"
+            - normal: false
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - text/plain; charset=utf-8
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:16:05 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:23:59 GMT
+            - normal: true
+              expected:
+                key: Server
+                value:
+                    - uvicorn
+              actual:
+                key: Server
+                value:
+                    - uvicorn
+        body_result:
+            - normal: false
+              type: PLAIN
+              expected: '{"name":"Bob Johnson","email":"bob.johnson@example.com","password":"scpckpiotpo567","stream":"Comnerce","id":3}'
+              actual: Internal Server Error
+        dep_result: []
+    - kind: Http
+      name: report-1
+      status: FAILED
+      started: 1697282640
+      completed: 1697282640
+      test_case_path: /home/shashwat/Projects/fastapi-postgres/keploy/test-set-0
+      mock_path: ""
+      test_case_id: test-11
+      req:
+        method: PUT
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/2
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "147"
+            Content-Type: application/json
+            Host: 127.0.0.1:8000
+            Postman-Token: f6cb2ecf-e164-46a2-a99b-e247d0c2687d
+            User-Agent: PostmanRuntime/7.33.0
+        body: |4-
+                {
+                    "name": "Alice Smith",
+                    "email": "alicesmith@example.com",
+                    "password": "alicesmith789",
+                    "stream": "Arts"
+                }
+        body_type: ""
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "106"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:17:11 GMT
+            Server: uvicorn
+        body: '{"name":"Alice Smith","email":"alicesmith@example.com","password":"sbmjdftnjui89:","stream":"Arts","id":2}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+      noise:
+        - header.Date
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: false
+              expected:
+                key: Content-Length
+                value:
+                    - "106"
+              actual:
+                key: Content-Length
+                value:
+                    - "113"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:17:11 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:23:59 GMT
+            - normal: true
+              expected:
+                key: Server
+                value:
+                    - uvicorn
+              actual:
+                key: Server
+                value:
+                    - uvicorn
+        body_result:
+            - normal: false
+              type: JSON
+              expected: '{"name":"Alice Smith","email":"alicesmith@example.com","password":"sbmjdftnjui89:","stream":"Arts","id":2}'
+              actual: '{"name":"Alice Smith","email":"alicesmith@example.com","password":"sbmjdftnjui89:","stream":"Mathematics","id":2}'
+        dep_result: []
+    - kind: Http
+      name: report-1
+      status: FAILED
+      started: 1697282640
+      completed: 1697282640
+      test_case_path: /home/shashwat/Projects/fastapi-postgres/keploy/test-set-0
+      mock_path: ""
+      test_case_id: test-12
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: 127.0.0.1:8000
+            Postman-Token: 336c47cc-d952-45d9-96a1-806231ea1b19
+            User-Agent: PostmanRuntime/7.33.0
+        body: ""
+        body_type: ""
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "325"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:17:14 GMT
+            Server: uvicorn
+        body: '[{"name":"John Doe","email":"johndoe@example.com","password":"skpioepf234","stream":"Mathematics","id":1},{"name":"Bob Johnson","email":"bob.johnson@example.com","password":"scpckpiotpo567","stream":"Comnerce","id":3},{"name":"Alice Smith","email":"alicesmith@example.com","password":"sbmjdftnjui89:","stream":"Arts","id":2}]'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+      noise:
+        - header.Date
+        - body.stream
+      result:
+        status_code:
+            normal: false
+            expected: 200
+            actual: 500
+        headers_result:
+            - normal: false
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - text/plain; charset=utf-8
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:17:14 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:23:59 GMT
+            - normal: true
+              expected:
+                key: Server
+                value:
+                    - uvicorn
+              actual:
+                key: Server
+                value:
+                    - uvicorn
+            - normal: false
+              expected:
+                key: Content-Length
+                value:
+                    - "325"
+              actual:
+                key: Content-Length
+                value:
+                    - "21"
+        body_result:
+            - normal: false
+              type: PLAIN
+              expected: '[{"name":"John Doe","email":"johndoe@example.com","password":"skpioepf234","stream":"Mathematics","id":1},{"name":"Bob Johnson","email":"bob.johnson@example.com","password":"scpckpiotpo567","stream":"Comnerce","id":3},{"name":"Alice Smith","email":"alicesmith@example.com","password":"sbmjdftnjui89:","stream":"Arts","id":2}]'
+              actual: Internal Server Error
+        dep_result: []
+    - kind: Http
+      name: report-1
+      status: PASSED
+      started: 1697282640
+      completed: 1697282640
+      test_case_path: /home/shashwat/Projects/fastapi-postgres/keploy/test-set-0
+      mock_path: ""
+      test_case_id: test-13
+      req:
+        method: DELETE
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/2
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: 127.0.0.1:8000
+            Postman-Token: 64cdc773-c08a-497c-9cc7-4fc978ab3853
+            User-Agent: PostmanRuntime/7.33.0
+        body: ""
+        body_type: ""
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "106"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:17:29 GMT
+            Server: uvicorn
+        body: '{"name":"Alice Smith","email":"alicesmith@example.com","password":"sbmjdftnjui89:","stream":"Arts","id":2}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+      noise:
+        - header.Date
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:17:29 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:23:59 GMT
+            - normal: true
+              expected:
+                key: Server
+                value:
+                    - uvicorn
+              actual:
+                key: Server
+                value:
+                    - uvicorn
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "106"
+              actual:
+                key: Content-Length
+                value:
+                    - "106"
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '{"name":"Alice Smith","email":"alicesmith@example.com","password":"sbmjdftnjui89:","stream":"Arts","id":2}'
+              actual: '{"name":"Alice Smith","email":"alicesmith@example.com","password":"sbmjdftnjui89:","stream":"Arts","id":2}'
+        dep_result: []
+    - kind: Http
+      name: report-1
+      status: PASSED
+      started: 1697282640
+      completed: 1697282640
+      test_case_path: /home/shashwat/Projects/fastapi-postgres/keploy/test-set-0
+      mock_path: ""
+      test_case_id: test-14
+      req:
+        method: DELETE
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/2
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: 127.0.0.1:8000
+            Postman-Token: d288404e-6f1b-4ef6-ae07-37901bff7f90
+            User-Agent: PostmanRuntime/7.33.0
+        body: ""
+        body_type: ""
+      resp:
+        status_code: 404
+        header:
+            Content-Length: "42"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:17:34 GMT
+            Server: uvicorn
+        body: '{"detail":"Student with ID=2 not found!!"}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+      noise:
+        - header.Date
+      result:
+        status_code:
+            normal: true
+            expected: 404
+            actual: 404
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:17:34 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:23:59 GMT
+            - normal: true
+              expected:
+                key: Server
+                value:
+                    - uvicorn
+              actual:
+                key: Server
+                value:
+                    - uvicorn
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "42"
+              actual:
+                key: Content-Length
+                value:
+                    - "42"
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '{"detail":"Student with ID=2 not found!!"}'
+              actual: '{"detail":"Student with ID=2 not found!!"}'
+        dep_result: []
+    - kind: Http
+      name: report-1
+      status: PASSED
+      started: 1697282640
+      completed: 1697282640
+      test_case_path: /home/shashwat/Projects/fastapi-postgres/keploy/test-set-0
+      mock_path: ""
+      test_case_id: test-15
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "115"
+            Content-Type: application/json
+            Host: 127.0.0.1:8000
+            Postman-Token: 4e014bcf-4ab6-4aa2-a44d-97076d6e9266
+            User-Agent: PostmanRuntime/7.33.0
+        body: |4-
+                {
+                  "name": "Bob Johnson",
+                  "email": "bobjohnson@example.com",
+                  "password": "bobjohnson456"
+                }
+        body_type: ""
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "113"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:17:41 GMT
+            Server: uvicorn
+        body: '{"name":"Bob Johnson","email":"bobjohnson@example.com","password":"scpckpiotpo567","stream":"Mathematics","id":4}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+      noise:
+        - header.Date
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:17:41 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:23:59 GMT
+            - normal: true
+              expected:
+                key: Server
+                value:
+                    - uvicorn
+              actual:
+                key: Server
+                value:
+                    - uvicorn
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "113"
+              actual:
+                key: Content-Length
+                value:
+                    - "113"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '{"name":"Bob Johnson","email":"bobjohnson@example.com","password":"scpckpiotpo567","stream":"Mathematics","id":4}'
+              actual: '{"name":"Bob Johnson","email":"bobjohnson@example.com","password":"scpckpiotpo567","stream":"Mathematics","id":4}'
+        dep_result: []
+    - kind: Http
+      name: report-1
+      status: FAILED
+      started: 1697282640
+      completed: 1697282640
+      test_case_path: /home/shashwat/Projects/fastapi-postgres/keploy/test-set-0
+      mock_path: ""
+      test_case_id: test-16
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "115"
+            Content-Type: application/json
+            Host: 127.0.0.1:8000
+            Postman-Token: f463eec8-6406-4785-b8e5-f02435142b25
+            User-Agent: PostmanRuntime/7.33.0
+        body: |4-
+                {
+                  "name": "Bob Johnson",
+                  "email": "bobjohnson@example.com",
+                  "password": "bobjohnson456"
+                }
+        body_type: ""
+      resp:
+        status_code: 400
+        header:
+            Content-Length: "41"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:17:48 GMT
+            Server: uvicorn
+        body: '{"detail":"Student already registered!!"}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+      noise:
+        - header.Date
+      result:
+        status_code:
+            normal: false
+            expected: 400
+            actual: 500
+        headers_result:
+            - normal: false
+              expected:
+                key: Content-Length
+                value:
+                    - "41"
+              actual:
+                key: Content-Length
+                value:
+                    - "21"
+            - normal: false
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - text/plain; charset=utf-8
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:17:48 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:23:59 GMT
+            - normal: true
+              expected:
+                key: Server
+                value:
+                    - uvicorn
+              actual:
+                key: Server
+                value:
+                    - uvicorn
+        body_result:
+            - normal: false
+              type: PLAIN
+              expected: '{"detail":"Student already registered!!"}'
+              actual: Internal Server Error
+        dep_result: []
+    - kind: Http
+      name: report-1
+      status: FAILED
+      started: 1697282640
+      completed: 1697282640
+      test_case_path: /home/shashwat/Projects/fastapi-postgres/keploy/test-set-0
+      mock_path: ""
+      test_case_id: test-17
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: 127.0.0.1:8000
+            Postman-Token: 4de5b200-0862-4b0f-a1c5-41a8103fd184
+            User-Agent: PostmanRuntime/7.33.0
+        body: ""
+        body_type: ""
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "332"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:17:52 GMT
+            Server: uvicorn
+        body: '[{"name":"John Doe","email":"johndoe@example.com","password":"skpioepf234","stream":"Mathematics","id":1},{"name":"Bob Johnson","email":"bob.johnson@example.com","password":"scpckpiotpo567","stream":"Comnerce","id":3},{"name":"Bob Johnson","email":"bobjohnson@example.com","password":"scpckpiotpo567","stream":"Mathematics","id":4}]'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+      noise:
+        - header.Date
+        - body.stream
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:17:52 GMT
+              actual:
+                key: Date
+                value:
+                    - Sat, 14 Oct 2023 11:23:59 GMT
+            - normal: true
+              expected:
+                key: Server
+                value:
+                    - uvicorn
+              actual:
+                key: Server
+                value:
+                    - uvicorn
+            - normal: false
+              expected:
+                key: Content-Length
+                value:
+                    - "332"
+              actual:
+                key: Content-Length
+                value:
+                    - "334"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+        body_result:
+            - normal: false
+              type: JSON
+              expected: '[{"name":"John Doe","email":"johndoe@example.com","password":"skpioepf234","stream":"Mathematics","id":1},{"name":"Bob Johnson","email":"bob.johnson@example.com","password":"scpckpiotpo567","stream":"Comnerce","id":3},{"name":"Bob Johnson","email":"bobjohnson@example.com","password":"scpckpiotpo567","stream":"Mathematics","id":4}]'
+              actual: '[{"name":"John Doe","email":"johndoe@example.com","password":"skpioepf234","stream":"Mathematics","id":1},{"name":"Alice Smith","email":"alicesmith@example.com","password":"sbmjdftnjui89:","stream":"Mathematics","id":2},{"name":"Bob Johnson","email":"bobjohnson@example.com","password":"scpckpiotpo567","stream":"Mathematics","id":3}]'
+        dep_result: []
+test_set: test-set-0

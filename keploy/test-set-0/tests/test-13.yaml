@@ -1,0 +1,45 @@
+version: api.keploy.io/v1beta2
+kind: Http
+name: test-13
+spec:
+    metadata: {}
+    req:
+        method: DELETE
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/2
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: 127.0.0.1:8000
+            Postman-Token: 64cdc773-c08a-497c-9cc7-4fc978ab3853
+            User-Agent: PostmanRuntime/7.33.0
+        body: ""
+        body_type: ""
+    resp:
+        status_code: 200
+        header:
+            Content-Length: "106"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:17:29 GMT
+            Server: uvicorn
+        body: '{"name":"Alice Smith","email":"alicesmith@example.com","password":"sbmjdftnjui89:","stream":"Arts","id":2}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+    objects: []
+    assertions:
+        noise:
+            - header.Date
+    created: 1697282251
+curl: |
+    curl --request DELETE \
+      --url http://127.0.0.1:8000/students/2 \
+      --header 'Postman-Token: 64cdc773-c08a-497c-9cc7-4fc978ab3853' \
+      --header 'Host: 127.0.0.1:8000' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Connection: keep-alive' \
+      --header 'User-Agent: PostmanRuntime/7.33.0' \
+      --header 'Accept: */*' \

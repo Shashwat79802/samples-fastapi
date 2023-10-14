@@ -1,0 +1,45 @@
+version: api.keploy.io/v1beta2
+kind: Http
+name: test-7
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://127.0.0.1:8000/students/2
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: 127.0.0.1:8000
+            Postman-Token: 9752c144-2fb6-46e5-b0c7-fe2ccf075400
+            User-Agent: PostmanRuntime/7.33.0
+        body: ""
+        body_type: ""
+    resp:
+        status_code: 200
+        header:
+            Content-Length: "113"
+            Content-Type: application/json
+            Date: Sat, 14 Oct 2023 11:14:59 GMT
+            Server: uvicorn
+        body: '{"name":"Alice Smith","email":"alicesmith@example.com","password":"sbmjdftnjui89:","stream":"Mathematics","id":2}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+    objects: []
+    assertions:
+        noise:
+            - header.Date
+    created: 1697282102
+curl: |
+    curl --request GET \
+      --url http://127.0.0.1:8000/students/2 \
+      --header 'User-Agent: PostmanRuntime/7.33.0' \
+      --header 'Accept: */*' \
+      --header 'Postman-Token: 9752c144-2fb6-46e5-b0c7-fe2ccf075400' \
+      --header 'Host: 127.0.0.1:8000' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Connection: keep-alive' \
